@@ -10,21 +10,27 @@ To run this code, you should have a Linux Ubuntu system
 # Installation
 
 0. Update
+
 sudo apt-get update
 
 1. Install lapack
+
 sudo apt-get install libblas-dev liblapack-dev
 
 2. Install gfortran
+
 sudo apt-get install gfortran
 
 3. Install OpenGL
+
 sudo apt-get install freeglut3-dev
 
 4. Download eigen3
+
 https://gitlab.com/libeigen/eigen/-/releases/3.4.0
 
 5. Move eigen3 to /usr/local/include
+
 sudo mv 'your eigen' /usr/local/include
 
 6. Install mkl, use following commands
