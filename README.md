@@ -7,6 +7,8 @@ This project focused on the contact dynamics of a flexible net system.
 
 To run this code, you should have a Linux Ubuntu system
 
+# Installation
+
 0. Update
 sudo apt-get update
 
@@ -25,20 +27,15 @@ https://gitlab.com/libeigen/eigen/-/releases/3.4.0
 5. Move eigen3 to /usr/local/include
 sudo mv 'your eigen' /usr/local/include
 
-6. Install mkl
+6. Install mkl, use following commands
 
-Installation:
-1. Use following commands
-# Add package repository
 sudo apt-get install -y gpg-agent wget
 wget -qO - https://repositories.intel.com/graphics/intel-graphics.key | sudo apt-key add -
 sudo apt-add-repository 'deb [arch=amd64] https://repositories.intel.com/graphics/ubuntu focal main'
 
-# Install run-time packages
 sudo apt-get update
 sudo apt-get install intel-opencl-icd intel-level-zero-gpu level-zero intel-media-va-driver-non-free libmfx1
 
-# OPTIONAL: Install developer packages
 sudo apt-get install libigc-dev intel-igc-cm libigdfcl-dev libigfxcmrt-dev level-zero-dev
 stat -c "%G" /dev/dri/render*
 ... # for GPU (not required)
@@ -57,9 +54,8 @@ sudo apt install intel-hpckit(not required)
 Must run this cmd everytime for a new terminal
 source /opt/intel/oneapi/setvars.sh
 
-
-7. Make
+# Make
 g++ -I /usr/local/include/eigen3 main.cpp world.cpp setInput.cpp timeStepper.cpp inertialForce.cpp externalGravityForce.cpp dampingForce.cpp elasticStretchingForce.cpp elasticBendingForce.cpp elasticPlate.cpp externalContactForceBody.cpp -lGL -lglut -lGLU -L${MKLROOT}/lib/intel64 -Wl,--no-as-needed -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -liomp5 -llapack -lgfortran -fopenmp -lpthread -lm -Ofast -o simDER
 
-8. Run 
+# Run 
 ./simDER option.txt
