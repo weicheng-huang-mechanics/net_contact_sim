@@ -5,6 +5,8 @@ This project focused on the contact dynamics of a flexible net system.
 
 <br/><img src='demo.gif' width="400">
 
+<br/><img src='demo2.gif' width="400">
+
 To run this code, you should have a Linux Ubuntu system
 
 # Installation
