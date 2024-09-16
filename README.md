@@ -1,4 +1,4 @@
-# A computational software for the contact dynamics of a flexible net
+# A software for the contact dynamics of a flexible net
 
 # Overview
 This project focused on the contact dynamics of a flexible net system.
