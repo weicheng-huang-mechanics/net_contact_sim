@@ -3,7 +3,7 @@
 # Overview
 This project focused on the contact dynamics of a flexible net system.
 
-<br/><img src='output.gif' width="600">
+<br/><img src='demo.gif' width="600">
 
 To run this code, you should have a Linux Ubuntu system
 
